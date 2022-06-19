@@ -1,0 +1,201 @@
+.todoList{
+    width: 1280px;
+    height: 800px;
+
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 48px 85px;
+
+    background-color: $primary;
+    >nav ul{
+        display: flex;
+        flex-direction: column;
+        gap: 42px;
+
+        color: $secondary-2;
+        font-size: $font-m;
+        >li{
+            >a{
+                color: #FFFFFF33;
+                &:visited{
+                    color: #FFFFFF33;
+                }
+                >.material-icons{
+                    font-size: $font-m;
+                    margin-right: 8px;
+                }
+            }
+        }
+        >.active{
+            a{
+                color: $secondary-2;
+                &:visited{
+                    color: $secondary-2;
+                }
+            }
+        }
+    }
+    >#todoList{
+        margin-left: 108px;
+       >.add{
+        @extend %add;
+       }
+       >.todo{
+            margin-top: 48px;
+            color: $light;
+        >.title{
+            width: 445px;
+            height: 44px;
+            background-color: #FFFFFF33;
+            display: flex;
+            padding: 8px 16px;
+            justify-content: space-between;
+            align-items: center;
+
+            >h3{
+                font-size: $font-s;
+                line-height: 36px;
+            }
+            >a{
+                color: $light;
+            }
+        }
+        >.list{
+            @extend %list;
+            margin-top: 19px;
+            >li{
+                >.round{
+                    border: 2px solid $light;
+                    background-color: $primary;
+                }
+                >.line{
+                    text-decoration: line-through;
+                }
+                >.play{
+                    color: $light;
+                }
+                a:nth-child(1){
+                    span{
+                        color: $light;
+                    }
+                }
+            }
+        }
+       }
+    }
+    >#analytics{
+        color: $light;
+        >.time{
+            >.title{
+                width: 445px;
+                height: 44px;
+                background-color: #FFFFFF33;
+                display: flex;
+                padding-left: 16px;
+                h3{
+                    font-size: $font-s;
+                    line-height: 36px;
+                    margin: auto 0;
+                }
+            }
+            >.tomato{
+               margin-top: 16px;
+               display: flex;
+               justify-content: space-between;
+               p{
+                font-size: $font-l;
+                line-height: 64px;
+                color: $secondary-2;
+                span{
+                    font-size: 16px;
+                    color: #FFFFFF33;
+                }
+               }
+            }
+        }
+        >.chart{
+            margin-top: 46px;
+            >.title{
+                width: 445px;
+                height: 44px;
+                background-color: #FFFFFF33;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px 16px;
+                h3{
+                    font-size: $font-s;
+                    line-height: 36px;
+                    margin: auto 0;
+                }
+                >.date{
+                    display: flex;
+                    align-items: center;
+                    a{ 
+                        display: block;
+                        width: 24px;
+                        height: 24px;
+                        color: $light;
+                        &:visited{
+                            color:$light;
+                        }
+                        span{
+                            display: inline-block;
+                            margin: auto;
+                        }
+                    }
+                    p{
+                        margin: auto 8px;
+                    }
+                }
+            }
+        }
+    }
+    >#ringtones{
+        color: $light;
+        >.work{
+            margin-bottom: 48px;
+            >.title{
+                width: 445px;
+                height: 44px;
+                background-color: #FFFFFF33;
+                display: flex;
+                padding-left: 16px;
+                h3{
+                    font-size: $font-s;
+                    line-height: 36px;
+                    margin: auto 0;
+                }
+            }
+            >ul{
+                margin-top: 16px;
+                width: 446px;
+                height: 182px;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+
+                li{
+                    width: 33.33%;
+                    display: flex;
+                    align-items: center;
+                    a{
+                        margin-right: 4px;
+                        display: flex;
+                        &:visited{
+                            color: $light;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    >.link{
+        span{
+            color: $light;
+            font-size: 48px;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+.index{
+    width: 1280px;
+    height: 800px;
+
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 48px 85px;
+
+    background-image: linear-gradient(to right, $primary-2 65%,$primary 35%);
+
+    color: $primary;
+    
+    >main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        >.add{
+            @extend %add;
+        }
+        >.nowTodo{
+            display: flex;
+            flex-direction: column;
+            >.todo{
+                display: flex;
+                >a{
+                    display: block;
+
+                    width: 48px;
+                    height: 48px;
+                    border: 1px solid $primary;
+                    border-radius: 50%;
+                    background-color: $primary-2;
+                }
+                p{
+                    font-size: $font-s;
+                    line-height: 28px;
+                    padding-left: 16px;
+                }
+            }
+            >.time{
+                font-size: 176px;
+                width: 454px;
+                height: 206px;
+                text-align: center;
+                color: $secondary-2;
+                line-height: 206px;
+            }
+        }
+        >.list{
+            display: flex;
+            flex-direction: column;
+            >ul{
+                @extend %list;
+        }
+            >.more{
+                line-height: 19px;
+                display: inline-block;
+                margin-top: 9px;
+                margin-right: 10px;
+                text-align: end;
+                &:visited{
+                    color: $secondary-2;
+                }
+            }
+
+        }
+    }
+    >nav{
+        >ul{
+            display: flex;
+            flex-direction: column;
+            li{
+                >a{
+                    color: $light;
+                    >span{
+                        font-size: $font-m;
+                        }
+                }
+                margin-bottom: 48px;
+            }
+        } 
+    }
+}

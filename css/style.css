@@ -1,0 +1,394 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.todoList > #todoList > .add, .index > main > .add {
+  width: 445px;
+  height: 56px;
+  position: relative;
+}
+.todoList > #todoList > .add > input, .index > main > .add > input {
+  width: 100%;
+  height: 100%;
+  padding: 0 0 0 17px;
+  border: 0;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FF4384;
+  font-weight: bold;
+}
+.todoList > #todoList > .add > input::-moz-placeholder, .index > main > .add > input::-moz-placeholder {
+  color: #FF4384;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 16px;
+}
+.todoList > #todoList > .add > input:-ms-input-placeholder, .index > main > .add > input:-ms-input-placeholder {
+  color: #FF4384;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 16px;
+}
+.todoList > #todoList > .add > input::placeholder, .index > main > .add > input::placeholder {
+  color: #FF4384;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 16px;
+}
+.todoList > #todoList > .add > a, .index > main > .add > a {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+.todoList > #todoList > .add > a span, .index > main > .add > a span {
+  font-style: 24px;
+  color: #FF4384;
+}
+
+.todoList > #todoList > .todo > .list, .index > main > .list > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 0;
+}
+.todoList > #todoList > .todo > .list > li, .index > main > .list > ul > li {
+  width: 445px;
+  height: 32px;
+  display: flex;
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+.todoList > #todoList > .todo > .list > li > .round, .index > main > .list > ul > li > .round {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #003164;
+  display: block;
+  border-radius: 50%;
+}
+.todoList > #todoList > .todo > .list > li > p, .index > main > .list > ul > li > p {
+  line-height: 24px;
+  margin-left: 4px;
+}
+.todoList > #todoList > .todo > .list > li > .play, .index > main > .list > ul > li > .play {
+  margin-left: auto;
+  color: #003164;
+}
+
+.index {
+  width: 1280px;
+  height: 800px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 48px 85px;
+  background-image: linear-gradient(to right, #FFEDF7 65%, #003164 35%);
+  color: #003164;
+}
+.index > main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.index > main > .nowTodo {
+  display: flex;
+  flex-direction: column;
+}
+.index > main > .nowTodo > .todo {
+  display: flex;
+}
+.index > main > .nowTodo > .todo > a {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #003164;
+  border-radius: 50%;
+  background-color: #FFEDF7;
+}
+.index > main > .nowTodo > .todo p {
+  font-size: 24px;
+  line-height: 28px;
+  padding-left: 16px;
+}
+.index > main > .nowTodo > .time {
+  font-size: 176px;
+  width: 454px;
+  height: 206px;
+  text-align: center;
+  color: #FF4384;
+  line-height: 206px;
+}
+.index > main > .list {
+  display: flex;
+  flex-direction: column;
+}
+.index > main > .list > .more {
+  line-height: 19px;
+  display: inline-block;
+  margin-top: 9px;
+  margin-right: 10px;
+  text-align: end;
+}
+.index > main > .list > .more:visited {
+  color: #FF4384;
+}
+.index > nav > ul {
+  display: flex;
+  flex-direction: column;
+}
+.index > nav > ul li {
+  margin-bottom: 48px;
+}
+.index > nav > ul li > a {
+  color: #FFFFFF;
+}
+.index > nav > ul li > a > span {
+  font-size: 36px;
+}
+
+.todoList {
+  width: 1280px;
+  height: 800px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 48px 85px;
+  background-color: #003164;
+}
+.todoList > nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  color: #FF4384;
+  font-size: 36px;
+}
+.todoList > nav ul > li > a {
+  color: rgba(255, 255, 255, 0.2);
+}
+.todoList > nav ul > li > a:visited {
+  color: rgba(255, 255, 255, 0.2);
+}
+.todoList > nav ul > li > a > .material-icons {
+  font-size: 36px;
+  margin-right: 8px;
+}
+.todoList > nav ul > .active a {
+  color: #FF4384;
+}
+.todoList > nav ul > .active a:visited {
+  color: #FF4384;
+}
+.todoList > #todoList {
+  margin-left: 108px;
+}
+.todoList > #todoList > .todo {
+  margin-top: 48px;
+  color: #FFFFFF;
+}
+.todoList > #todoList > .todo > .title {
+  width: 445px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  padding: 8px 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+.todoList > #todoList > .todo > .title > h3 {
+  font-size: 24px;
+  line-height: 36px;
+}
+.todoList > #todoList > .todo > .title > a {
+  color: #FFFFFF;
+}
+.todoList > #todoList > .todo > .list {
+  margin-top: 19px;
+}
+.todoList > #todoList > .todo > .list > li > .round {
+  border: 2px solid #FFFFFF;
+  background-color: #003164;
+}
+.todoList > #todoList > .todo > .list > li > .line {
+  text-decoration: line-through;
+}
+.todoList > #todoList > .todo > .list > li > .play {
+  color: #FFFFFF;
+}
+.todoList > #todoList > .todo > .list > li a:nth-child(1) span {
+  color: #FFFFFF;
+}
+.todoList > #analytics {
+  color: #FFFFFF;
+}
+.todoList > #analytics > .time > .title {
+  width: 445px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  padding-left: 16px;
+}
+.todoList > #analytics > .time > .title h3 {
+  font-size: 24px;
+  line-height: 36px;
+  margin: auto 0;
+}
+.todoList > #analytics > .time > .tomato {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.todoList > #analytics > .time > .tomato p {
+  font-size: 64px;
+  line-height: 64px;
+  color: #FF4384;
+}
+.todoList > #analytics > .time > .tomato p span {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.2);
+}
+.todoList > #analytics > .chart {
+  margin-top: 46px;
+}
+.todoList > #analytics > .chart > .title {
+  width: 445px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px;
+}
+.todoList > #analytics > .chart > .title h3 {
+  font-size: 24px;
+  line-height: 36px;
+  margin: auto 0;
+}
+.todoList > #analytics > .chart > .title > .date {
+  display: flex;
+  align-items: center;
+}
+.todoList > #analytics > .chart > .title > .date a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  color: #FFFFFF;
+}
+.todoList > #analytics > .chart > .title > .date a:visited {
+  color: #FFFFFF;
+}
+.todoList > #analytics > .chart > .title > .date a span {
+  display: inline-block;
+  margin: auto;
+}
+.todoList > #analytics > .chart > .title > .date p {
+  margin: auto 8px;
+}
+.todoList > #ringtones {
+  color: #FFFFFF;
+}
+.todoList > #ringtones > .work {
+  margin-bottom: 48px;
+}
+.todoList > #ringtones > .work > .title {
+  width: 445px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  padding-left: 16px;
+}
+.todoList > #ringtones > .work > .title h3 {
+  font-size: 24px;
+  line-height: 36px;
+  margin: auto 0;
+}
+.todoList > #ringtones > .work > ul {
+  margin-top: 16px;
+  width: 446px;
+  height: 182px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.todoList > #ringtones > .work > ul li {
+  width: 33.33%;
+  display: flex;
+  align-items: center;
+}
+.todoList > #ringtones > .work > ul li a {
+  margin-right: 4px;
+  display: flex;
+}
+.todoList > #ringtones > .work > ul li a:visited {
+  color: #FFFFFF;
+}
+.todoList > .link span {
+  color: #FFFFFF;
+  font-size: 48px;
+}/*# sourceMappingURL=style.css.map */
