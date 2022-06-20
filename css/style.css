@@ -149,17 +149,19 @@ body {
   justify-content: space-between;
   position: relative;
   padding: 48px 85px;
+  position: relative;
   background-image: linear-gradient(to right, #FFEDF7 65%, #003164 35%);
   color: #003164;
 }
 .index > main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .index > main > .nowTodo {
   display: flex;
   flex-direction: column;
+  margin-top: 145px;
 }
 .index > main > .nowTodo > .todo {
   display: flex;
@@ -188,6 +190,7 @@ body {
 .index > main > .list {
   display: flex;
   flex-direction: column;
+  margin-top: auto;
 }
 .index > main > .list > .more {
   line-height: 19px;
@@ -211,6 +214,36 @@ body {
 }
 .index > nav > ul li > a > span {
   font-size: 36px;
+}
+.index > .playButton {
+  position: absolute;
+  width: 510px;
+  height: 510px;
+  right: 450px;
+  top: 50%;
+  transform: translate(50%, -50%);
+  background-color: #FF4384;
+  border-radius: 50%;
+  outline: 5px solid #FF4384;
+  outline-offset: 15px;
+}
+.index > .playButton > a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 108px;
+}
+.index > .playButton > a:visited {
+  color: #FFFFFF;
+}
+.index > .playButton > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(170%, 100%);
+  font-size: 24px;
+  color: #FFFFFF;
 }
 
 .todoList {

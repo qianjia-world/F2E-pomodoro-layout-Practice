@@ -6,7 +6,7 @@
     justify-content: space-between;
     position: relative;
     padding: 48px 85px;
-
+    position: relative;
     background-image: linear-gradient(to right, $primary-2 65%,$primary 35%);
 
     color: $primary;
@@ -14,13 +14,14 @@
     >main{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
         >.add{
             @extend %add;
         }
         >.nowTodo{
             display: flex;
             flex-direction: column;
+            margin-top: 145px;
             >.todo{
                 display: flex;
                 >a{
@@ -50,6 +51,7 @@
         >.list{
             display: flex;
             flex-direction: column;
+            margin-top: auto;
             >ul{
                 @extend %list;
         }
@@ -81,4 +83,35 @@
             }
         } 
     }
+    >.playButton{
+        position: absolute;
+        width: 510px;
+        height: 510px;
+        right: 450px;
+        top: 50%;
+        transform: translate(50%,-50%);
+        background-color: #FF4384;
+        border-radius: 50%;
+        outline: 5px solid #FF4384;
+        outline-offset:15px;
+        >a{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 108px;
+            &:visited{
+                color: $light;
+            }
+        }
+        >span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(170%,100%);
+            font-size: $font-s;
+            color: $light;
+        }
+    }
+
 }
